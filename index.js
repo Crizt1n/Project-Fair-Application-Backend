@@ -37,12 +37,12 @@ pfServer.use(router)
 pfServer.use('/uploads',express.static('./uploads'))
 
 // 7) Customsie the port - by default run = 3000
-const PORT = 4000 || process.env.PORT
+const PORT = process.env.PORT || 4000;
 
 // 8) Run the server
-pfServer.listen(PORT,()=>{
+pfServer.listen(PORT, () => {
     console.log(`Server running Successfully at PORT number : ${PORT}`);
-})
+});
 
 // 9) get http request to baseurl - http://localhost:4000/
 pfServer.get('/',(req,res)=>{
