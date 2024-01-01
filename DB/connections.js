@@ -8,5 +8,5 @@ const connectionString = process.env.DATABASE
 mongoose.connect(connectionString).then(()=>{
     console.log('mongodb connected successfully');
 }).catch((err)=>{
-    console.log('Mongodb connection failed due to'+err);
+    console.log('Mongodb connection failed due to :'+err);
 })

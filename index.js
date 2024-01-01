@@ -32,17 +32,17 @@ pfServer.use(express.json())
 pfServer.use(router)
 
 //pfserver should use uploads folder
-//first argument - how the other pplication should use this file
+//first argument - how the other application should use this file
 //second argument - to export the upload folder
 pfServer.use('/uploads',express.static('./uploads'))
 
 // 7) Customsie the port - by default run = 3000
-const PORT = process.env.PORT || 4000;
+const PORT = 4000 || process.env.PORT
 
 // 8) Run the server
-pfServer.listen(PORT, () => {
+pfServer.listen(PORT,()=>{
     console.log(`Server running Successfully at PORT number : ${PORT}`);
-});
+})
 
 // 9) get http request to baseurl - http://localhost:4000/
 pfServer.get('/',(req,res)=>{
