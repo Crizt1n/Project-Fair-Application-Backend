@@ -11,14 +11,14 @@ const express = require('express')
 // to communicate with the server
 const cors = require('cors')
 
+// import router
+const router = require('./Routes/router')
+
 // import connection.js
 //this import should be given after/below .env file import which is imported in the top
-require("./DB/connections")
+require('./DB/connections')
 
-// import router
- const router = require('./Routes/router')
-
-// 4) Create Server
+// 4) Create Server - creates an express application. the express function is a top level function exported by the express()
 const pfServer = express()
 
 // 5) Use of Cors by server
